@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B1D96602938EAC5004B6B00 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D965C2938EAC5004B6B00 /* Response.swift */; };
+		4B1D96612938EAC5004B6B00 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D965D2938EAC5004B6B00 /* Article.swift */; };
+		4B1D96622938EAC5004B6B00 /* MediaMetadatum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D965E2938EAC5004B6B00 /* MediaMetadatum.swift */; };
+		4B1D96632938EAC5004B6B00 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D965F2938EAC5004B6B00 /* Media.swift */; };
 		4B64543D2938E9C800DA5B94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B64543C2938E9C800DA5B94 /* AppDelegate.swift */; };
 		4B64543F2938E9C800DA5B94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B64543E2938E9C800DA5B94 /* SceneDelegate.swift */; };
 		4B6454412938E9C800DA5B94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6454402938E9C800DA5B94 /* ViewController.swift */; };
@@ -14,9 +18,15 @@
 		4B6454472938E9C800DA5B94 /* VRGArticles.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B6454452938E9C800DA5B94 /* VRGArticles.xcdatamodeld */; };
 		4B6454492938E9CA00DA5B94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B6454482938E9CA00DA5B94 /* Assets.xcassets */; };
 		4B64544C2938E9CA00DA5B94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B64544A2938E9CA00DA5B94 /* LaunchScreen.storyboard */; };
+		F26B8785E61F96D4D32636E0 /* Pods_VRGArticles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D904CED9A0B6B02A856376 /* Pods_VRGArticles.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		121077E2BEB25CCD5E23EA14 /* Pods-VRGArticles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRGArticles.release.xcconfig"; path = "Target Support Files/Pods-VRGArticles/Pods-VRGArticles.release.xcconfig"; sourceTree = "<group>"; };
+		4B1D965C2938EAC5004B6B00 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		4B1D965D2938EAC5004B6B00 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		4B1D965E2938EAC5004B6B00 /* MediaMetadatum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaMetadatum.swift; sourceTree = "<group>"; };
+		4B1D965F2938EAC5004B6B00 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		4B6454392938E9C800DA5B94 /* VRGArticles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRGArticles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B64543C2938E9C800DA5B94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B64543E2938E9C800DA5B94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +36,8 @@
 		4B6454482938E9CA00DA5B94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B64544B2938E9CA00DA5B94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B64544D2938E9CA00DA5B94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		694F7D231F866EEED0D035BF /* Pods-VRGArticles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRGArticles.debug.xcconfig"; path = "Target Support Files/Pods-VRGArticles/Pods-VRGArticles.debug.xcconfig"; sourceTree = "<group>"; };
+		A2D904CED9A0B6B02A856376 /* Pods_VRGArticles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VRGArticles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +45,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F26B8785E61F96D4D32636E0 /* Pods_VRGArticles.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B1D965A2938EA64004B6B00 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B1D965D2938EAC5004B6B00 /* Article.swift */,
+				4B1D965F2938EAC5004B6B00 /* Media.swift */,
+				4B1D965E2938EAC5004B6B00 /* MediaMetadatum.swift */,
+				4B1D965C2938EAC5004B6B00 /* Response.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4B6454302938E9C800DA5B94 = {
 			isa = PBXGroup;
 			children = (
 				4B64543B2938E9C800DA5B94 /* VRGArticles */,
 				4B64543A2938E9C800DA5B94 /* Products */,
+				C69B652DB6A8728EAE768FCF /* Pods */,
+				BBB14B594F1D55E876284D18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +84,7 @@
 		4B64543B2938E9C800DA5B94 /* VRGArticles */ = {
 			isa = PBXGroup;
 			children = (
+				4B1D965A2938EA64004B6B00 /* Model */,
 				4B64543C2938E9C800DA5B94 /* AppDelegate.swift */,
 				4B64543E2938E9C800DA5B94 /* SceneDelegate.swift */,
 				4B6454402938E9C800DA5B94 /* ViewController.swift */,
@@ -70,6 +97,23 @@
 			path = VRGArticles;
 			sourceTree = "<group>";
 		};
+		BBB14B594F1D55E876284D18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2D904CED9A0B6B02A856376 /* Pods_VRGArticles.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C69B652DB6A8728EAE768FCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				694F7D231F866EEED0D035BF /* Pods-VRGArticles.debug.xcconfig */,
+				121077E2BEB25CCD5E23EA14 /* Pods-VRGArticles.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B6454502938E9CA00DA5B94 /* Build configuration list for PBXNativeTarget "VRGArticles" */;
 			buildPhases = (
+				C2605AA0C66F67D252238B8E /* [CP] Check Pods Manifest.lock */,
 				4B6454352938E9C800DA5B94 /* Sources */,
 				4B6454362938E9C800DA5B94 /* Frameworks */,
 				4B6454372938E9C800DA5B94 /* Resources */,
+				036FF09FA842D4985D3809E1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,15 +182,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		036FF09FA842D4985D3809E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VRGArticles/Pods-VRGArticles-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VRGArticles/Pods-VRGArticles-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VRGArticles/Pods-VRGArticles-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2605AA0C66F67D252238B8E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VRGArticles-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4B6454352938E9C800DA5B94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4B6454412938E9C800DA5B94 /* ViewController.swift in Sources */,
+				4B1D96622938EAC5004B6B00 /* MediaMetadatum.swift in Sources */,
 				4B64543D2938E9C800DA5B94 /* AppDelegate.swift in Sources */,
+				4B1D96612938EAC5004B6B00 /* Article.swift in Sources */,
 				4B6454472938E9C800DA5B94 /* VRGArticles.xcdatamodeld in Sources */,
 				4B64543F2938E9C800DA5B94 /* SceneDelegate.swift in Sources */,
+				4B1D96632938EAC5004B6B00 /* Media.swift in Sources */,
+				4B1D96602938EAC5004B6B00 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +378,7 @@
 		};
 		4B6454512938E9CA00DA5B94 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 694F7D231F866EEED0D035BF /* Pods-VRGArticles.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +407,7 @@
 		};
 		4B6454522938E9CA00DA5B94 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 121077E2BEB25CCD5E23EA14 /* Pods-VRGArticles.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

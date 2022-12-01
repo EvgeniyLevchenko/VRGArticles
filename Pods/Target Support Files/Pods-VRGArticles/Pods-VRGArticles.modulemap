@@ -1,0 +1,6 @@
+framework module Pods_VRGArticles {
+  umbrella header "Pods-VRGArticles-umbrella.h"
+
+  export *
+  module * { export * }
+}
