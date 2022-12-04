@@ -16,6 +16,13 @@ class FavouriteArticlesViewModel: ArticlesViewModelType {
     }
 
     func reloadDataSource(with searchText: String? = nil,completion: @escaping (ArticlesDataSourceSnapshot) -> Void) {
+        let filtered = articles.value.filter { article in
+            article.contains(filter: searchText)
+        }
         
+        var snapshot = ArticlesDataSourceSnapshot()
+        snapshot.appendSections([.favourites])
+        snapshot.appendItems(filtered, toSection: .favourites)
+        completion(snapshot)
     }
 }

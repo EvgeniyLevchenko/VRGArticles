@@ -24,9 +24,13 @@ class MostSharedArticlesViewModel: ArticlesViewModelType {
     }
 
     func reloadDataSource(with searchText: String? = nil,completion: @escaping (ArticlesDataSourceSnapshot) -> Void) {
+        let filtered = articles.value.filter { article in
+            article.contains(filter: searchText)
+        }
+        
         var snapshot = ArticlesDataSourceSnapshot()
         snapshot.appendSections([.mostShared])
-        snapshot.appendItems(articles.value, toSection: .mostShared)
+        snapshot.appendItems(filtered, toSection: .mostShared)
         completion(snapshot)
     }
 }

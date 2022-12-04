@@ -98,7 +98,7 @@ extension FavouritesViewController {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(84))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(100))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 8, trailing: 0)
         
@@ -112,17 +112,13 @@ extension FavouritesViewController {
 extension FavouritesViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel.reloadDataSource(with: searchText) { snapshot in
-            self.dataSource?.apply(snapshot, animatingDifferences: true, completion: {
-                self.collectionView.reloadData()
-            })
+            self.dataSource?.apply(snapshot, animatingDifferences: true)
         }
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         viewModel.reloadDataSource(with: nil) { snapshot in
-            self.dataSource?.apply(snapshot, animatingDifferences: true, completion: {
-                self.collectionView.reloadData()
-            })
+            self.dataSource?.apply(snapshot, animatingDifferences: true)
         }
     }
 }
