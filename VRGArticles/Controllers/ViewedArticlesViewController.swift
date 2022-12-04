@@ -111,17 +111,13 @@ extension ViewedArticlesViewController {
 extension ViewedArticlesViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel.reloadDataSource(with: searchText) { snapshot in
-            self.dataSource?.apply(snapshot, animatingDifferences: true, completion: {
-                self.collectionView.reloadData()
-            })
+            self.dataSource?.apply(snapshot, animatingDifferences: true)
         }
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         viewModel.reloadDataSource(with: nil) { snapshot in
-            self.dataSource?.apply(snapshot, animatingDifferences: true, completion: {
-                self.collectionView.reloadData()
-            })
+            self.dataSource?.apply(snapshot, animatingDifferences: true)
         }
     }
 }

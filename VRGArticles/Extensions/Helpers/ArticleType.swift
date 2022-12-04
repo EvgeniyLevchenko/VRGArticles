@@ -11,4 +11,5 @@ enum ArticleType: String, CaseIterable {
     case mostViewed = "viewed"
     case mostShared = "shared"
     case mostEmailed = "emailed"
+    case favourites
 }

@@ -26,15 +26,14 @@ class ArticleCollectionViewCell: UICollectionViewCell, Configuring {
     
     private var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Article title"
-        label.font = .avenir20()
+        label.numberOfLines = 2
+        label.font = .avenir16()
         return label
     }()
     
     private var authorLabel: UILabel = {
         let label = UILabel()
-        label.text = "Article author"
-        label.font = .avenir20()
+        label.font = .avenir14()
         return label
     }()
     
@@ -54,7 +53,6 @@ class ArticleCollectionViewCell: UICollectionViewCell, Configuring {
            let url = URL(string: strURL) {
             coverImageView.sd_setImage(with: url)
         }
-        print()
         titleLabel.text = article.title
         authorLabel.text = article.byline
     }
