@@ -38,4 +38,21 @@ struct Article: Codable {
         case media
         case etaID = "eta_id"
     }
+    
+    func contains(filter: String?) -> Bool {
+        guard let filter = filter else { return true }
+        if filter.isEmpty { return true }
+        let lowercasedFilter = filter.lowercased()
+        return title.lowercased().contains(lowercasedFilter)
+    }
+}
+
+extension Article: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        return hasher.combine(id)
+    }
+    
+    static func == (lhs: Article, rhs: Article) -> Bool {
+       return lhs.id == rhs.id
+    }
 }

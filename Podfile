@@ -7,4 +7,5 @@ target 'VRGArticles' do
 
   # Pods for VRGArticles
 pod 'Alamofire'
+pod 'SDWebImage'
 end

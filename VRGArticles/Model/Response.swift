@@ -11,11 +11,11 @@ import Foundation
 struct Response: Codable {
     let status, copyright: String
     let numResults: Int
-    let results: [Article]
+    let articles: [Article]
 
     enum CodingKeys: String, CodingKey {
         case status, copyright
         case numResults = "num_results"
-        case results
+        case articles = "results"
     }
 }
