@@ -53,6 +53,7 @@ class ViewedArticlesViewController: UIViewController {
         collectionView.backgroundColor = .mainWhite()
         view.addSubview(collectionView)
         collectionView.register(ArticleCollectionViewCell.self, forCellWithReuseIdentifier: ArticleCollectionViewCell.reuseID)
+        collectionView.delegate = self
     }
     
     private func bindView() {
@@ -69,6 +70,17 @@ class ViewedArticlesViewController: UIViewController {
                 self.showAlert(with: "Error!", message: error.localizedDescription)
             }
         }
+    }
+}
+
+// MARK: - Collection View Delegate
+extension ViewedArticlesViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let article = self.dataSource?.itemIdentifier(for: indexPath) else { return }
+        let detailsViewModel = ArticleDetailsViewModel(article: article)
+        let detailsVC = ArticleDetailsViewController(viewModel: detailsViewModel)
+        detailsVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(detailsVC, animated: true)
     }
 }
 

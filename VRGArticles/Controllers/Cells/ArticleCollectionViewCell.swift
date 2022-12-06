@@ -12,30 +12,9 @@ class ArticleCollectionViewCell: UICollectionViewCell, Configuring {
     
     static var reuseID: String = "ArticleCell"
     
-    private var coverImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.backgroundColor = .systemGray2
-        imageView.layer.cornerRadius = 4
-        imageView.clipsToBounds = true
-        imageView.contentMode = .scaleToFill
-        imageView.layer.borderColor = UIColor.systemGray4.cgColor
-        imageView.layer.borderWidth = 1
-        imageView.image = UIImage(named: "imagePlaceholder")
-        return imageView
-    }()
-    
-    private var titleLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 2
-        label.font = .avenir16()
-        return label
-    }()
-    
-    private var authorLabel: UILabel = {
-        let label = UILabel()
-        label.font = .avenir14()
-        return label
-    }()
+    private let coverImageView = UIImageView(contentMode: .scaleToFill, cornerRadius: 10)
+    private let titleLabel = UILabel(text: "", font: .avenir16(), numberOfLines: 2)
+    private let authorLabel = UILabel(text: "", font: .avenir14())
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -52,6 +31,8 @@ class ArticleCollectionViewCell: UICollectionViewCell, Configuring {
         if let strURL = article.media.first?.mediaMetadata.first?.url,
            let url = URL(string: strURL) {
             coverImageView.sd_setImage(with: url)
+        } else {
+            coverImageView.image = UIImage(systemName: "photo")
         }
         titleLabel.text = article.title
         authorLabel.text = article.byline

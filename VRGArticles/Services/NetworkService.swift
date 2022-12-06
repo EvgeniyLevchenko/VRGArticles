@@ -30,7 +30,7 @@ class NetworkService: Networking {
             }
             
             if (value.starts(with: "_")) {
-                fatalError("Register for a TMDB developer account and get an API key at https://developers.themoviedb.org/3/getting-started/introduction.")
+                fatalError("Register for a NYT's developer account and get an API key at https://developer.nytimes.com.")
             }
             
             return value
