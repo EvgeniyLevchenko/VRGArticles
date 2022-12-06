@@ -9,6 +9,7 @@ import Foundation
 
 // MARK: - Article
 struct Article: Codable {
+    let uuid = UUID()
     let uri: String
     let url: String
     let id, assetID: Int
@@ -49,10 +50,10 @@ struct Article: Codable {
 
 extension Article: Hashable {
     public func hash(into hasher: inout Hasher) {
-        return hasher.combine(id)
+        return hasher.combine(uuid)
     }
     
     static func == (lhs: Article, rhs: Article) -> Bool {
-       return lhs.id == rhs.id
+       return lhs.uuid == rhs.uuid
     }
 }

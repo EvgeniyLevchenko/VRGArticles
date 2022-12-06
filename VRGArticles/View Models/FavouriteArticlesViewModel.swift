@@ -12,7 +12,15 @@ class FavouriteArticlesViewModel: ArticlesViewModelType {
     var articles: Box<[Article]> = Box([])
     
     func fetchArticles(completion: @escaping (Error?) -> Void) {
-        
+        CoreDataService.shared.getArticles { result in
+            switch result {
+            case .success(let articles):
+                self.articles.value = articles
+                completion(nil)
+            case .failure(let error):
+                completion(error)
+            }
+        }
     }
 
     func reloadDataSource(with searchText: String? = nil,completion: @escaping (ArticlesDataSourceSnapshot) -> Void) {
