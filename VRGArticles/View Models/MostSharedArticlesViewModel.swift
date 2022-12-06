@@ -23,7 +23,7 @@ class MostSharedArticlesViewModel: ArticlesViewModelType {
         }
     }
 
-    func reloadDataSource(with searchText: String? = nil,completion: @escaping (ArticlesDataSourceSnapshot) -> Void) {
+    func reloadDataSource(with searchText: String? = nil, completion: @escaping (ArticlesDataSourceSnapshot) -> Void) {
         let filtered = articles.value.filter { article in
             article.contains(filter: searchText)
         }
